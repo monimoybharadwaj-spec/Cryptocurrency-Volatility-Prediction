@@ -53,3 +53,12 @@ indicators and receive real-time volatility predictions.
 To run locally:
 ```bash
 streamlit run app.py
+
+---
+
+## Deployment Note
+
+Due to GitHub file size limitations, the trained model file is not stored
+in this repository. The Streamlit application demonstrates the deployment
+pipeline and user interface. The complete project, including the trained
+model, is provided separately as a ZIP file.
