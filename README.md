@@ -1,16 +1,21 @@
-# Cryptocurrency Volatility Prediction using Machine Learning
 
-## Project Overview
-This project builds and deploys a machine learning system to predict short-term cryptocurrency price volatility.  
-Volatility is modeled as the rolling standard deviation of log returns and predicted using technical and liquidity-based indicators derived from historical market data.
+# Cryptocurrency Volatility Prediction  
 
-The project follows a complete end-to-end data science lifecycle including:
-- Data preprocessing and cleaning  
-- Exploratory data analysis  
-- Feature engineering  
-- Model training and comparison  
-- Hyperparameter tuning  
-- Model deployment using Streamlit  
+---
+
+## Problem Statement
+Cryptocurrency markets are highly volatile, making risk management, trading strategies, and portfolio allocation extremely difficult. This project builds a machine learning system to predict short-term cryptocurrency price volatility using historical market data and technical indicators. Instead of predicting price direction, this system predicts how unstable the price will be in the near future.
+
+---
+
+## What is Volatility Prediction?
+Volatility measures how much an asset’s price fluctuates over time. High volatility means large and unpredictable price movements, while low volatility indicates more stable prices.
+
+In this project, volatility is modeled as the rolling standard deviation of log returns and predicted using technical and liquidity-based indicators derived from historical market data. The system does not try to predict whether the price will go up or down — it predicts how unstable the market will be, which is critical for risk management, position sizing, options pricing, portfolio allocation, and algorithmic trading.
+
+---
+
+## End-to-End Machine Learning Workflow
 
 ---
 
@@ -21,10 +26,22 @@ https://cryptocurrency-volatility-prediction-monimoy.streamlit.app
 ---
 
 ## Dataset
-- Source: Historical cryptocurrency market data  
-- Features: Open, High, Low, Close prices, Trading Volume, Market Capitalization  
-- Multiple cryptocurrencies included  
-- Time-series structure preserved throughout the workflow  
+The dataset used in this project is included directly in this repository as `dataset.csv`.
+
+It contains historical cryptocurrency market data with common fields such as:
+- Open, High, Low, Close prices  
+- Volume  
+- Market capitalization  
+- Timestamps (date/time)
+
+This data is used to compute:
+- Log returns  
+- Rolling volatility  
+- Liquidity metrics  
+- Other engineered features used for modeling
+
+The dataset can be accessed here:  
+https://github.com/monimoybharadwaj-spec/Cryptocurrency-Volatility-Prediction/blob/main/dataset.csv
 
 ---
 
