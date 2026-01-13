@@ -1,5 +1,8 @@
 # Pipeline Architecture
 
+## End-to-End Data Flow
+
+```text
 Raw Cryptocurrency Market Data (CSV)
         ↓
 Data Cleaning & Validation
@@ -27,3 +30,4 @@ Model Hosting (GitHub Releases)
 Streamlit Cloud Inference API
         ↓
 Live Web Application
+```
