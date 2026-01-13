@@ -1,28 +1,29 @@
-
 # Pipeline Architecture
 
-# End-to-End Data Flow
-
-CSV Dataset
-↓
-Data Cleaning
-↓
-EDA (Visualization & Correlation Analysis)
-↓
-Feature Engineering
-↓
-NaN Removal (Rolling Window Effect)
-↓
-Feature–Target Separation
-↓
-Train/Test Split (Time-Based)
-↓
-Model Training
-↓
-Model Evaluation
-↓
-Hyperparameter Tuning
-↓
-Final Model Training
-↓
-Streamlit Deployment
+Raw Cryptocurrency Market Data (CSV)
+        ↓
+Data Cleaning & Validation
+        ↓
+Exploratory Data Analysis (EDA)
+        ↓
+Feature Engineering (Returns, Volatility, ATR, Bollinger Bands, Liquidity Ratios)
+        ↓
+Rolling Window Alignment & NaN Handling
+        ↓
+Feature–Target Matrix Construction
+        ↓
+Time-Series Train–Test Split
+        ↓
+Model Training & Cross-Validation
+        ↓
+Hyperparameter Optimization
+        ↓
+Final Model Selection
+        ↓
+Model Serialization (Joblib)
+        ↓
+Model Hosting (GitHub Releases)
+        ↓
+Streamlit Cloud Inference API
+        ↓
+Live Web Application
