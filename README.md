@@ -1,64 +1,107 @@
 # Cryptocurrency Volatility Prediction using Machine Learning
 
 ## Project Overview
-This project focuses on predicting short-term cryptocurrency price volatility using
-machine learning techniques. Volatility is modeled as the rolling standard deviation
-of log returns and predicted using engineered technical and liquidity-based indicators.
+This project builds and deploys a machine learning system to predict short-term cryptocurrency price volatility.  
+Volatility is modeled as the rolling standard deviation of log returns and predicted using technical and liquidity-based indicators derived from historical market data.
 
-The project follows a complete data science lifecycle including data preprocessing,
-exploratory data analysis, feature engineering, model comparison, hyperparameter tuning,
-and deployment using Streamlit.
+The project follows a complete end-to-end data science lifecycle including:
+- Data preprocessing and cleaning  
+- Exploratory data analysis  
+- Feature engineering  
+- Model training and comparison  
+- Hyperparameter tuning  
+- Model deployment using Streamlit  
+
+---
+
+## Live Demo
+Try the live application here:  
+https://cryptocurrency-volatility-prediction-monimoy.streamlit.app
 
 ---
 
 ## Dataset
-- Source: Historical cryptocurrency market data
-- Features include: Open, High, Low, Close prices, Volume, Market Capitalization
-- Multiple cryptocurrencies are included
-- Time-series structure preserved throughout the workflow
+- Source: Historical cryptocurrency market data  
+- Features: Open, High, Low, Close prices, Trading Volume, Market Capitalization  
+- Multiple cryptocurrencies included  
+- Time-series structure preserved throughout the workflow  
 
 ---
 
-## Key Features
-- Log return–based volatility modeling
-- Technical indicators (ATR, Bollinger Bands, Moving Average)
-- Comparison of multiple regression models
-- Time-series aware validation
-- Random Forest selected as final model
-- Interactive Streamlit deployment
+## Feature Engineering
+The following technical and liquidity indicators were engineered:
+
+- Log returns  
+- Rolling volatility  
+- Average True Range (ATR)  
+- Bollinger Band width  
+- Moving averages  
+- Volume to market-cap ratio  
+
+These features capture both price dynamics and market liquidity effects on volatility.
 
 ---
 
-## Models Used
-- Linear Regression
-- K-Nearest Neighbors
-- Support Vector Regressor
-- Decision Tree Regressor
-- Random Forest Regressor (Final Model)
-- Gradient Boosting Regressor
+## Models Evaluated
+Multiple regression models were trained and compared:
+
+- Linear Regression  
+- K-Nearest Neighbors  
+- Support Vector Regressor  
+- Decision Tree Regressor  
+- Gradient Boosting Regressor  
+- Random Forest Regressor (Final Model)  
+
+Time-series aware train-test splitting was used to prevent data leakage.
 
 ---
 
 ## Final Model Performance (Random Forest)
-- RMSE ≈ 0.015
-- MAE ≈ 0.009
-- R² ≈ 0.86
+
+| Metric | Value |
+|------|-------|
+| RMSE | ≈ 0.015 |
+| MAE  | ≈ 0.009 |
+| R²   | ≈ 0.86 |
 
 ---
 
-## Deployment
-The trained model is deployed using Streamlit, allowing users to input technical
-indicators and receive real-time volatility predictions.
+## Deployment Architecture
 
-To run locally:
-```bash
-streamlit run app.py
+The application is deployed using Streamlit and follows a clean production-style setup:
+
+| Component | Location |
+|--------|--------|
+| Source code | GitHub repository |
+| Trained model | GitHub Releases |
+| Inference | Streamlit Cloud |
+| User Interface | Web browser |
+
+Due to GitHub file size limits, the trained model (rf_volatility_model.pkl) is stored in GitHub Releases and automatically downloaded by the Streamlit application at runtime.
+
+Model download URL used by the app:
+https://github.com/monimoybharadwaj-spec/Cryptocurrency-Volatility-Prediction/releases/download/V1/rf_volatility_model.pkl
 
 ---
 
-## Deployment Note
+## How to Run Locally
 
-Due to GitHub file size limitations, the trained model file is not stored
-in this repository. The Streamlit application demonstrates the deployment
-pipeline and user interface. The complete project, including the trained
-model, is provided separately as a ZIP file.
+pip install -r requirements.txt  
+streamlit run app.py  
+
+The application will automatically download the trained model if it is not present.
+
+---
+
+## Project Highlights
+- Real-world financial volatility modeling  
+- Time-series aware validation  
+- Feature-rich ML pipeline  
+- Large model handled using GitHub Releases  
+- Fully deployed interactive web application  
+
+---
+
+## Author
+Monimoy Bharadwaj  
+Cryptocurrency Volatility Prediction — End-to-End Machine Learning Project
